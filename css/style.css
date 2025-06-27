@@ -1,12 +1,60 @@
-<!DOCTYPE html>
-<html lang="en"> 
-<html>
-<head>
-  <title>My Styled Page</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Welcome to my website!</h1>
-  <p>This is a paragraph of text that we will style.</p>
-</body>
-</html>
+ p {
+  color: #660000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #110909;
+  font: 700 16px Georgia, 'Times New Roman', Times, sans-serif;
+}
+
+a:link { color: blue; }
+a:visited { color: green; }
+a:hover { color: maroon; }
+a:active { color: blue; }
+/*
+    p::first-line – targets the first line of a block
+    p::first-letter – targets the first letter
+    p::before – inserts content before an element
+    p::after – inserts content after an element
+*/
+    p::first-line {
+      color: blue;
+      font-weight: bold;
+    }
+    p::first-letter {
+      font-size: large;
+      color: black;
+    }
+    p::before {
+      content: "💻";
+      color:#006633
+    }
+    p::after {
+      content: "✽";
+      color: darkorchid;
+    }
+
+/*
+<div id="gallery">
+  <img src="img1.png" id="img1">
+  <p>
+    <img src="img2.png" id="img2">
+    <img src="img3.png" id="img3">
+    <img src="img4.png" id="img4">
+  </p>
+</div>
+*/
+<div id="gallery"> 
+    <img src="img1.png" id="img1" alt="Web developer working on a laptop"> 
+    <p> 
+        <img src="img2.png" id="img2" alt="Web developer coding on a computer"> 
+        <img src="img3.png" id="img3" alt="Web developer discussing project with team"> 
+        <img src="img4.png" id="img4" alt="Web developer reviewing website on tablet"> 
+    </p> 
+</div> 
+
+#gallery img 	Descendant selector – targets all <img> inside #gallery 	#img1, #img2, #img3, #img4
+#gallery > img 	Child selector – targets direct child <img> inside #gallery 	#img1
+#img2 + img 	Adjacent sibling selector – targets next <img> after #img2 	#img3
+#img2 ~ img 	General sibling selector – targets all siblings after #img2 	#img3, #img4
