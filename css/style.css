@@ -27,7 +27,7 @@ p::first-line {
     }
     p::after {
       content: "✽";
-      color: darkorchid;
+      color: red;
     }
 
 #gallery img { 
