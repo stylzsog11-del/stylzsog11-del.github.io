@@ -10,15 +10,10 @@ h1, h2, h3 {
 
 a:link { color: blue; }
 a:visited { color: green; }
-a:hover { color: maroon; }
+a:hover { color: magenta; }
 a:active { color: blue; }
-/*
-    p::first-line – targets the first line of a block
-    p::first-letter – targets the first letter
-    p::before – inserts content before an element
-    p::after – inserts content after an element
-*/
-    p::first-line {
+
+p::first-line {
       color: blue;
       font-weight: bold;
     }
@@ -35,26 +30,42 @@ a:active { color: blue; }
       color: darkorchid;
     }
 
-/*
-<div id="gallery">
-  <img src="img1.png" id="img1">
-  <p>
-    <img src="img2.png" id="img2">
-    <img src="img3.png" id="img3">
-    <img src="img4.png" id="img4">
-  </p>
-</div>
-*/
-<div id="gallery"> 
-    <img src="img1.png" id="img1" alt="Web developer working on a laptop"> 
-    <p> 
-        <img src="img2.png" id="img2" alt="Web developer coding on a computer"> 
-        <img src="img3.png" id="img3" alt="Web developer discussing project with team"> 
-        <img src="img4.png" id="img4" alt="Web developer reviewing website on tablet"> 
-    </p> 
-</div> 
+#gallery img { 
+  border: 2px solid blue; 
+  margin: 10px;
+}
+        
+#gallery > img { 
+  box-shadow: 5px 5px 10px gray; 
+}
 
-#gallery img 	Descendant selector – targets all <img> inside #gallery 	#img1, #img2, #img3, #img4
-#gallery > img 	Child selector – targets direct child <img> inside #gallery 	#img1
-#img2 + img 	Adjacent sibling selector – targets next <img> after #img2 	#img3
-#img2 ~ img 	General sibling selector – targets all siblings after #img2 	#img3, #img4
+#img2 + img { 
+  border: 3px dashed red; 
+} 
+
+#img2 ~ img { 
+  filter: grayscale(50%); 
+}
+
+p { 
+  color: blue;
+}
+
+#gallery { 
+  color: green; 
+}
+
+blockquote { 
+  font-style: italic !important; 
+}
+
+.small-text {
+    font-size: 90%;
+}
+
+
+
+
+
+
+
